@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/caesarcipher"
+    tools:context="com.Crypto.blackdragon92.cipher.CaesarCipherActivity"
+    android:weightSum="1">
+
+    <EditText
+        android:id="@+id/CaesarText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="top|center_horizontal"
+        android:inputType="textPersonName"
+        android:text="Caesar Cipher"
+        android:textColor="#ff0000"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <EditText
+        android:id="@+id/inputText"
+        android:text="Enter text to encrypt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter text to encrypt"
+        android:textColor="#ff0000" />
+
+    <EditText
+        android:id="@+id/password"
+        android:text="password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputText"
+        android:hint="Enter to encrypt password"
+        android:textColor="#ff0000"/>
+
+    <TextView
+        android:id="@+id/outputText"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/password"
+        android:textColor="#ff0000"
+        />
+
+    <Button
+        android:id="@+id/encButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/outputText"
+        android:text="Encrypt" />
+
+    <Button
+        android:id="@+id/decButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/encButton"
+        android:text="Decrypt"
+        />
+
+</LinearLayout>

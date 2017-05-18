@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ciphlock"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:label="Crypto"
+    android:weightSum="1"
+    tools:context="com.Crypto.blackdragon92.cipher.MainActivity">
+
+    <ImageButton
+        android:id="@+id/cipher"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_weight="0.04"
+        android:elevation="?android:attr/listPreferredItemHeight"
+        android:gravity="center"
+        android:text="Encrypt/Decrpt Messages"
+        app:srcCompat="@drawable/cipher" />
+
+    <TextView
+        android:id="@+id/EncryptText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/cipher"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="Encrypt/Decrypt Message" />
+
+    <ImageButton
+        android:id="@+id/caesarButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/EncryptText"
+        android:layout_weight="0.04"
+        android:elevation="?android:attr/listPreferredItemHeight"
+        android:text="Caesar Cipher Encryption"
+        app:srcCompat="@drawable/caesarcipher"/>
+
+    <TextView
+        android:id="@+id/caesarText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/caesarButton"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="Encrypt/Decrypt Message" />
+
+
+</LinearLayout>
