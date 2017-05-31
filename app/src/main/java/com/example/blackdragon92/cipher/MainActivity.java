@@ -7,10 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+//https://www.youtube.com/watch?v=OOclvSIelcI login/username
 public class MainActivity extends AppCompatActivity {
 
     private static ImageButton encryptButton;
     private static ImageButton caesarButton;
+    private static ImageButton vigButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,18 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v){
                         Intent intent = new Intent("com.Crypto.blackdragon92.cipher.CaesarCipherActivity");
+                        startActivity(intent);
+                    }
+                }
+        );
+    }
+
+    public void onClickButtonListener3(){
+        vigButton.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+                        Intent intent = new Intent("com.Crypto.blackdragon92.cipher.ViginereActivity");
                         startActivity(intent);
                     }
                 }

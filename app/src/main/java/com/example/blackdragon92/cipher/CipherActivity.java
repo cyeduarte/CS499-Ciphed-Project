@@ -1,25 +1,40 @@
 package com.Crypto.blackdragon92.cipher;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.Crypto.blackdragon92.cipher.MainActivity;
+
 import java.security.MessageDigest;
+import java.util.ArrayList;
+
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 
+//keystore identification: https://developer.android.com/training/articles/keystore.html
 public class CipherActivity extends AppCompatActivity {
 
-    EditText inputText, inputPassword;
+    EditText inputText, inputPassword, phoneNumber;
     TextView outputText;
-    Button encButton, decButton;
+    Button encButton, decButton, sendButton, emailButton;
     String output;
     String AES = "AES";
-    protected ciph cipher;
+    SmsManager smsManager = SmsManager.getDefault();
+    //protected Ciph cipher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -27,20 +42,140 @@ public class CipherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cipher);
 
+        if(ContextCompat.checkSelfPermission(CipherActivity.this, Manifest.permission.SEND_SMS)
+                != PackageManager.PERMISSION_GRANTED)
+        {
+            if(ActivityCompat.shouldShowRequestPermissionRationale(CipherActivity.this,
+                    Manifest.permission.SEND_SMS))
+            {
+                ActivityCompat.requestPermissions(CipherActivity.this,
+                        new String[]{Manifest.permission.SEND_SMS}, 1);
+            }
+            else
+            {
+                ActivityCompat.requestPermissions(CipherActivity.this,
+                        new String[]{Manifest.permission.SEND_SMS}, 1);
+            }
+        }
+        else
+        {
+            //do nothing
+        }
+
         inputText =(EditText) findViewById(R.id.inputText);
         inputPassword = (EditText) findViewById(R.id.password);
+        phoneNumber = (EditText) findViewById(R.id.phoneNumber);
 
         outputText = (TextView) findViewById(R.id.outputText);
         encButton = (Button) findViewById(R.id.encButton);
         decButton = (Button) findViewById(R.id.decButton);
+        sendButton = (Button) findViewById(R.id.Send);
+        emailButton = (Button) findViewById(R.id.email);
 
         onClickButtonListener();
 
         onClickButtonListener2();
+
+        sendOnClickListener();
+    }
+
+    //@Override
+    public void onRequestPermission(int requestCode, String[] permission, int[] grantResults)
+    {
+        switch(requestCode)
+        {
+            case 1:{
+                if(grantResults.length > 0 && grantResults[0] ==  PackageManager.PERMISSION_GRANTED)
+                {
+                    if(ContextCompat.checkSelfPermission(CipherActivity.this,
+                            Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED)
+                    {
+                        Toast.makeText(this, "permission granted!", Toast.LENGTH_SHORT).show();
+                    }
+                }
+                else
+                {
+                    Toast.makeText(this, "permission not granted!", Toast.LENGTH_SHORT).show();
+                }
+                return;
+            }
+
+
+        }
+    }
+
+
+    public void sendOnClickListener()
+    {
+        sendButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+                String number = phoneNumber.getText().toString();
+                String  sms = outputText.getText().toString();
+
+                try{
+                    SmsManager smsManager = SmsManager.getDefault();
+                    smsManager.sendTextMessage(number, null, sms, null, null);
+                    Toast.makeText(CipherActivity.this, "Sent!", Toast.LENGTH_SHORT).show();
+                }
+                catch(Exception e){
+                    Toast.makeText(CipherActivity.this, "Failed!", Toast.LENGTH_SHORT).show();
+
+                }
+
+            }
+        });
+    }
+
+    public void emailOnClickListener()
+    {
+        emailButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+                Intent intent = null, chooser = null;
+
+                try{
+                    intent = new Intent(Intent.ACTION_SEND);
+                    intent.setData(Uri.parse("mailto:"));
+                    String[] to = {phoneNumber.getText().toString()};
+                    intent.putExtra(Intent.EXTRA_EMAIL, to);
+                    intent.putExtra(Intent.EXTRA_SUBJECT, " ");
+                    intent.putExtra(Intent.EXTRA_TEXT, outputText.getText().toString());
+                    intent.setType("message/rfc822");
+                    chooser = Intent.createChooser(intent, "Send Email");
+                    startActivity(chooser);
+                }
+                catch(Exception e){
+                    Toast.makeText(CipherActivity.this, "Failed!", Toast.LENGTH_SHORT).show();
+
+                }
+
+            }
+        });
+    }
+
+    public void sendEmail(View v)
+    {
+        Intent intent = null, chooser = null;
+
+        if(v.getId() == R.id.email)
+        {
+            intent = new Intent(Intent.ACTION_SEND);
+            intent.setData(Uri.parse("mailto:"));
+            String[] to = {phoneNumber.getText().toString()};
+            intent.putExtra(Intent.EXTRA_EMAIL, to);
+            intent.putExtra(Intent.EXTRA_SUBJECT, " ");
+            intent.putExtra(Intent.EXTRA_TEXT, outputText.getText().toString());
+            intent.setType("message/rfc822");
+            chooser = Intent.createChooser(intent, "Send Email");
+            startActivity(chooser);
+        }
     }
 
     /**
-     * AES Encryption/Decryption
+     * AES Encryption/Decryption button events
      */
 
     public void onClickButtonListener(){
@@ -73,6 +208,10 @@ public class CipherActivity extends AppCompatActivity {
            }
         });
     }
+
+    /**
+     * Encryption/Decryption algorithms
+     */
 
     private String encrypt(String data, String password) throws Exception
     {
