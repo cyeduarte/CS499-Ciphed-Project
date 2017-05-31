@@ -2,31 +2,13 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="C:\Users\BlackDragon92\.android\build-cache\a3a625c4ebe0678f7ae2e1c8885197e17119b81a\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\BlackDragon92\AndroidStudioProjects\Cipher\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="C:\Users\BlackDragon92\AndroidStudioProjects\Cipher\app\build\intermediates\pre-dexed\debug\classes_08fff388ba912cf496d61e53be00735404321d99.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\BlackDragon92\.android\build-cache\cbaad63e7952e4cee485f2bb9c89c543e9c531e1\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="C:\Users\BlackDragon92\AndroidStudioProjects\Cipher\app\build\intermediates\pre-dexed\debug\classes_05be547780445be067afff452559c24ff934b45f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\BlackDragon92\.android\build-cache\ee9d5349a6c20aff4e881c734fa32a6c67b62efc\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="C:\Users\BlackDragon92\AndroidStudioProjects\Cipher\app\build\intermediates\pre-dexed\debug\classes_dc49652f13e3436364fc567f5c80d5a4b88d4171.jar" />
+        sha1="7850a41db0040ef58804d65fb721631cd25b353b">
+        <dex dex="C:\Users\BlackDragon92\AndroidStudioProjects\Cipher\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_33cd598e65ad38a9b44cf0f9b7516fc1e21dee12\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -36,96 +18,6 @@
         revision="25.0.2"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
         <dex dex="C:\Users\BlackDragon92\AndroidStudioProjects\Cipher\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_4f97241b3c1dec8ea4a34a7114c37ca4015aa331\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\BlackDragon92\.android\build-cache\4f8ecc18c711a4d9d4ed196ab3debdba1d76718f\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="C:\Users\BlackDragon92\AndroidStudioProjects\Cipher\app\build\intermediates\pre-dexed\debug\classes_ba662d6962901d428f77597068badae81198a9de.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\BlackDragon92\.android\build-cache\20cf1f2d982655d97f28aa913b89dd630c48d3fb\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\BlackDragon92\AndroidStudioProjects\Cipher\app\build\intermediates\pre-dexed\debug\classes_52a6abcae579ddbb976bfb5e8c328a3229a04f54.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\BlackDragon92\.android\build-cache\92dd3ef2529ff48918905f2304e56e79067770ff\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
-        <dex dex="C:\Users\BlackDragon92\AndroidStudioProjects\Cipher\app\build\intermediates\pre-dexed\debug\classes_e557b517a20a4fe48cdd0fcf47fd7c7ad807c89e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\BlackDragon92\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="C:\Users\BlackDragon92\AndroidStudioProjects\Cipher\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.1_6768ff2558d8b4c45578546f99031585f6ac367c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\BlackDragon92\.android\build-cache\7665404102f3338fb561603a47bbdd98d0264ec1\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="C:\Users\BlackDragon92\AndroidStudioProjects\Cipher\app\build\intermediates\pre-dexed\debug\classes_bf53ee50820e880793166daa525e6b014481f1fd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\BlackDragon92\.android\build-cache\9717b58583cefdc29354421651feae4c5881db7e\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="C:\Users\BlackDragon92\AndroidStudioProjects\Cipher\app\build\intermediates\pre-dexed\debug\classes_9e2afa38d12e36536e0026858674fc7804752228.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\BlackDragon92\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
-        <dex dex="C:\Users\BlackDragon92\AndroidStudioProjects\Cipher\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_310208a2551a927cd44918f5395b03dfbfce3be4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\BlackDragon92\.android\build-cache\44cb2d7c44afb83155286dbcffc7d989ad7d7957\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="C:\Users\BlackDragon92\AndroidStudioProjects\Cipher\app\build\intermediates\pre-dexed\debug\classes_822618f659f61be116523b8dd3c5f1702b5929d8.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\BlackDragon92\AndroidStudioProjects\Cipher\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d821e174e34e87c149fc6a80de619391047d68d1">
-        <dex dex="C:\Users\BlackDragon92\AndroidStudioProjects\Cipher\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_33cd598e65ad38a9b44cf0f9b7516fc1e21dee12\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\BlackDragon92\.android\build-cache\276b7c47f532bba746b13abb7214fb715b4119ef\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="C:\Users\BlackDragon92\AndroidStudioProjects\Cipher\app\build\intermediates\pre-dexed\debug\classes_7b281077af0b00546fcd0c2a35cb274c8cd98ff4.jar" />
     </item>
 
 </items>
