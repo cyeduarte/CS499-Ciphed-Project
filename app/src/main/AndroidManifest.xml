@@ -2,6 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.Crypto.blackdragon92.cipher">
 
+    <uses-sdk
+
+        android:minSdkVersion="8"
+
+        android:targetSdkVersion="21" />
+
+
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" >
+
+    </uses-permission>
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -35,7 +51,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".RSAKeyActivity"></activity>
+        <activity android:name=".RSAKeyActivity" />
+        <activity android:name="com.example.blackdragon92.cipher.ViginereActivity"></activity>
     </application>
-
+    <uses-permission android:name="android.permission.SEND_MS">
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_SMS">
+    </uses-permission>
 </manifest>
