@@ -2,42 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:background="@drawable/caesarcipher"
-    tools:context="com.Crypto.blackdragon92.cipher.CaesarCipherActivity"
-    android:weightSum="1"
-    android:orientation="vertical">
-
-
+    tools:context="com.example.blackdragon92.cipher.ViginereActivity">
 
     <EditText
-        android:id="@+id/CaesarText"
+        android:id="@+id/VigText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="top|center_horizontal"
         android:inputType="textPersonName"
-        android:text="Caesar Cipher"
-        android:textColor="#ff00"
+        android:text="Viginiere Cipher"
+        android:textColor="#ff0000"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="5dp" />
-
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        app:srcCompat="@drawable/caesarimage" />
-
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter email"
-        android:text="Email"
-        android:textColor="#ff00" />
 
     <EditText
         android:id="@+id/inputText"
@@ -45,16 +26,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter text to encrypt"
-        android:textColor="#ff00" />
+        android:textColor="#ff0000" />
 
     <EditText
         android:id="@+id/password"
-        android:text="key"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/inputText"
         android:hint="Enter to encrypt password"
-        android:textColor="#ff00"/>
+        android:text="password"
+        android:textColor="#ff0000" />
 
     <TextView
         android:id="@+id/outputText"
@@ -66,40 +47,17 @@
 
     <Button
         android:id="@+id/encButton"
-        android:layout_width="match_parent"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/outputText"
-        android:text="Encrypt" />
+        android:text="Encrypt"
+        />
 
     <Button
         android:id="@+id/decButton"
-        android:layout_width="match_parent"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/encButton"
-        android:text="Decrypt"
-        />
-
-    <LinearLayout
-
-        android:id="@+id/linearLayout2"
-
-        android:layout_width="match_parent"
-
-        android:layout_height="wrap_content" >
-
-        <Button
-
-            android:id="@+id/Send"
-
-            android:layout_width="148dp"
-
-            android:layout_height="wrap_content"
-
-            android:layout_weight="0.06"
-
-            android:text="Send" />
-
-
-    </LinearLayout>
+        android:text="Decrypt" />
 
 </LinearLayout>
